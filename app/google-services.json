@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "971823486481",
+    "project_id": "vato-chito",
+    "storage_bucket": "vato-chito.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971823486481:android:f0bb583e8d4b8ea1df43b0",
+        "android_client_info": {
+          "package_name": "com.example.vatochito"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971823486481-7f4di2gvnnull972cndtau33f6iiunq4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vatochito",
+            "certificate_hash": "5de8e3c3295151bd2e39dc0df794a5b041c10677"
+          }
+        },
+        {
+          "client_id": "971823486481-50fg32og0jeusi7k5nlr7lgt93r28u9p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLiclgl70bsn5wunsfbqBopSM-z6_ZSw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971823486481-50fg32og0jeusi7k5nlr7lgt93r28u9p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
