@@ -64,13 +64,11 @@ public class setProfile extends AppCompatActivity {
         storageReference=firebaseStorage.getReference();
         firebaseFirestore=FirebaseFirestore.getInstance();
 
-
         mgetusername=findViewById(R.id.getusername);
         mgetuserimage=findViewById(R.id.getuserimage);
         mgetuserimageinimageview=findViewById(R.id.getuserimageinimageview);
         msaveprofile=findViewById(R.id.saveProfile);
         mprogressbarofsetprofile=findViewById(R.id.progressbarofsetProfile);
-
 
         mgetuserimage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,8 +116,6 @@ public class setProfile extends AppCompatActivity {
 
     private void sendDataToRealTimeDatabase()
     {
-
-
         name=mgetusername.getText().toString().trim();
         FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
         DatabaseReference databaseReference=firebaseDatabase.getReference(firebaseAuth.getUid());
@@ -128,10 +124,6 @@ public class setProfile extends AppCompatActivity {
         databaseReference.setValue(muserprofile);
         Toast.makeText(getApplicationContext(),"User Profile Added Sucessfully",Toast.LENGTH_SHORT).show();
         sendImagetoStorage();
-
-
-
-
     }
 
     private void sendImagetoStorage()
