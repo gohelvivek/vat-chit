@@ -86,7 +86,7 @@
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
         android:text="Send OTP"
-        android:textColor="#4b656e"
+        android:textColor="@color/black"
         android:textSize="15sp">
 
     </android.widget.Button>

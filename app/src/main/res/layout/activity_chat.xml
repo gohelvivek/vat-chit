@@ -23,8 +23,8 @@
                 android:id="@+id/myapptext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="!! VATO-CHITO !!"
-                android:textColor="#4b656e"
+                android:text="!! VATU-CHITU !!"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold">
 
@@ -45,10 +45,10 @@
         android:layout_below="@id/toolbar"
         android:layout_marginTop="0dp"
         android:backgroundTint="#4ce"
-        app:tabIndicatorColor="#4b656e"
+        app:tabIndicatorColor="@color/white"
         app:tabIndicatorHeight="3dp"
-        app:tabSelectedTextColor="#4b656e"
-        app:tabTextColor="#77a3a7">
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/black">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/chat"
