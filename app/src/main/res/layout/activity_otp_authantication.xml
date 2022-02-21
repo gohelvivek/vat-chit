@@ -13,7 +13,7 @@
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:src="@drawable/mychatapplogo">
+        android:src="@drawable/myapplogo">
 
     </ImageView>
 
@@ -69,11 +69,11 @@
         android:layout_below="@id/changenumber"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:background="#4ce"
+        android:background="#96e079"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
         android:text="Verify OTP"
-        android:textColor="@color/black">
+        android:textColor="#134f54">
 
     </android.widget.Button>
 

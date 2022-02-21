@@ -12,7 +12,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/mychatapplogo">
+        android:src="@drawable/myapplogo">
 
     </ImageView>
 
@@ -25,7 +25,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="5dp"
         android:text="from"
-        android:textSize="15dp"
+        android:fontFamily="monospace"
+        android:textSize="17dp"
         android:textColor="#1E1D1D">
 
     </TextView>
@@ -37,7 +38,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
-        android:text="VATO-CHITO"
+        android:text="VAT-CHIT"
+        android:fontFamily="monospace"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold">

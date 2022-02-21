@@ -101,7 +101,6 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
-
         mmovetoupdateprofile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -110,7 +109,6 @@ public class ProfileActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 
     }
 }

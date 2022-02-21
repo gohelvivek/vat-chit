@@ -14,7 +14,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
         android:text="Set Profile"
-        android:textColor="#4ce"
+        android:fontFamily="casual"
+        android:textColor="#96e079"
         android:textSize="30sp"
         android:textStyle="bold">
 
@@ -61,9 +62,9 @@
         android:layout_below="@id/getusername"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:background="#4ce"
+        android:background="#96e079"
         android:text="Save Profile"
-        android:textColor="#4b656e">
+        android:textColor="#134f54">
 
     </android.widget.Button>
 
