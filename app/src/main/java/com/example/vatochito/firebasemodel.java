@@ -2,7 +2,6 @@ package com.example.vatochito;
 
 public class firebasemodel {
 
-
     String name;
     String image;
     String uid;
@@ -17,6 +16,7 @@ public class firebasemodel {
     }
 
     public firebasemodel() {
+
     }
 
     public String getName() {
@@ -50,5 +50,4 @@ public class firebasemodel {
     public void setStatus(String status) {
         this.status = status;
     }
-
 }

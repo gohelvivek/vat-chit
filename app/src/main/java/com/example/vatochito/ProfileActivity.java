@@ -2,6 +2,8 @@ package com.example.vatochito;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -15,6 +17,8 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.tabs.TabItem;
+import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -28,7 +32,6 @@ import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 public class ProfileActivity extends AppCompatActivity {
-
 
     EditText mviewusername;
     FirebaseAuth firebaseAuth;
@@ -46,7 +49,6 @@ public class ProfileActivity extends AppCompatActivity {
     androidx.appcompat.widget.Toolbar mtoolbarofviewprofile;
     ImageButton mbackbuttonofviewprofile;
 
-
     FirebaseStorage firebaseStorage;
 
 
@@ -55,34 +57,31 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        mviewuserimageinimageview = findViewById(R.id.viewuserimageinimageview);
-        mviewusername = findViewById(R.id.viewusername);
-        mmovetoupdateprofile = findViewById(R.id.movetoupdateprofile);
-        firebaseFirestore = FirebaseFirestore.getInstance();
-        mtoolbarofviewprofile = findViewById(R.id.toolbarofviewprofile);
-        mbackbuttonofviewprofile = findViewById(R.id.backbuttonofviewprofile);
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        firebaseAuth = FirebaseAuth.getInstance();
-        firebaseStorage = FirebaseStorage.getInstance();
-
+        mviewuserimageinimageview=findViewById(R.id.viewuserimageinimageview);
+        mviewusername=findViewById(R.id.viewusername);
+        mmovetoupdateprofile=findViewById(R.id.movetoupdateprofile);
+        firebaseFirestore=FirebaseFirestore.getInstance();
+        mtoolbarofviewprofile=findViewById(R.id.toolbarofviewprofile);
+        mbackbuttonofviewprofile=findViewById(R.id.backbuttonofviewprofile);
+        firebaseDatabase=FirebaseDatabase.getInstance();
+        firebaseAuth=FirebaseAuth.getInstance();
+        firebaseStorage=FirebaseStorage.getInstance();
 
         setSupportActionBar(mtoolbarofviewprofile);
 
         mbackbuttonofviewprofile.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 finish();
             }
         });
 
-
-        storageReference = firebaseStorage.getReference();
+        storageReference=firebaseStorage.getReference();
         storageReference.child("Images").child(firebaseAuth.getUid()).child("Profile Pic").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
                 ImageURIacessToken = uri.toString();
                 Picasso.get().load(uri).into(mviewuserimageinimageview);
-
             }
         });
 
@@ -97,18 +96,19 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
-                Toast.makeText(getApplicationContext(), "Failed To Fetch", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Failed to Fetch", Toast.LENGTH_SHORT).show();
+
             }
         });
 
         mmovetoupdateprofile.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ProfileActivity.this, UpdateProfile.class);
-                intent.putExtra("nameofuser", mviewusername.getText().toString());
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this,UpdateProfile.class);
                 startActivity(intent);
             }
         });
+
 
     }
 }

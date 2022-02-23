@@ -16,28 +16,26 @@ import android.widget.Toast;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
-import com.google.firebase.firestore.FirebaseFirestore;
+
 
 public class chatActivity extends AppCompatActivity {
 
     TabLayout tabLayout;
     TabItem mchat,mcall,mstatus;
     ViewPager viewPager;
-    pagerAdapter pagerAdapter;
+    PagerAdapter pagerAdapter;
     androidx.appcompat.widget.Toolbar mtoolbar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-
-        tabLayout=findViewById(R.id.include);
-        mchat=findViewById(R.id.chat);
-        mcall=findViewById(R.id.calls);
-        mstatus=findViewById(R.id.status);
-        viewPager=findViewById(R.id.fragmentcontainer);
+        tabLayout = findViewById(R.id.include);
+        mchat = findViewById(R.id.chat);
+        mcall = findViewById(R.id.calls);
+        mstatus = findViewById(R.id.status);
+        viewPager = findViewById(R.id.fragmentcontainer);
 
         mtoolbar=findViewById(R.id.toolbar);
         setSupportActionBar(mtoolbar);
@@ -45,9 +43,6 @@ public class chatActivity extends AppCompatActivity {
         Drawable drawable= ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_baseline_more_vert_24);
         mtoolbar.setOverflowIcon(drawable);
 
-
-        pagerAdapter=new pagerAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
-        viewPager.setAdapter(pagerAdapter);
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -57,7 +52,6 @@ public class chatActivity extends AppCompatActivity {
                 {
                     pagerAdapter.notifyDataSetChanged();
                 }
-
             }
 
             @Override
@@ -70,14 +64,12 @@ public class chatActivity extends AppCompatActivity {
 
             }
         });
-
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
         switch (item.getItemId())
         {
             case R.id.profile:
@@ -95,10 +87,9 @@ public class chatActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         MenuInflater menuInflater=getMenuInflater();
         menuInflater.inflate(R.menu.menu,menu);
-
         return true;
     }
+
 }

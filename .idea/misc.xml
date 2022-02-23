@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/vivek/AndroidStudioProjects/VatChit/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.26197916666666665" />
         <entry key="..\:/Users/vivek/AndroidStudioProjects/VatChit/app/src/main/res/layout/activity_chat.xml" value="0.25" />
         <entry key="..\:/Users/vivek/AndroidStudioProjects/VatChit/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/vivek/AndroidStudioProjects/VatChit/app/src/main/res/layout/activity_otp_authantication.xml" value="0.25" />

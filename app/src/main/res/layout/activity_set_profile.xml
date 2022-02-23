@@ -22,8 +22,8 @@
     </TextView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_above="@+id/getusername"
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="80dp"
@@ -35,7 +35,7 @@
             android:id="@+id/getuserimageinimageview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="fitCenter"
+            android:scaleType="centerCrop"
             android:src="@drawable/defaultprofile">
 
         </ImageView>
@@ -44,14 +44,16 @@
 
 
     <EditText
+        android:id="@+id/getusername"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:inputType="textCapWords"
-        android:hint="Enter Your Name Here"
         android:layout_centerInParent="true"
-        android:id="@+id/getusername"
         android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp">
+        android:layout_marginRight="70dp"
+        android:hint="Enter Your Name Here"
+        android:cursorVisible="false"
+        android:gravity="center"
+        android:inputType="textCapWords">
 
     </EditText>
 

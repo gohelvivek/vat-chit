@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     Toast.makeText(getApplicationContext(),"Please Enter YOur number",Toast.LENGTH_SHORT).show();
                 }
-                else if(number.length()<10)
+                else if(number.length()<10 || number.length()>10)
                 {
                     Toast.makeText(getApplicationContext(),"Please Enter correct number",Toast.LENGTH_SHORT).show();
                 }
@@ -134,11 +134,6 @@ public class MainActivity extends AppCompatActivity {
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
         }
-
-
-
-
-
 
     }
 }
