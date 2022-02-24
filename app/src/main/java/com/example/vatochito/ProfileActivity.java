@@ -105,6 +105,7 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProfileActivity.this,UpdateProfile.class);
+                intent.putExtra("nameofuser",mviewusername.getText().toString());
                 startActivity(intent);
             }
         });
