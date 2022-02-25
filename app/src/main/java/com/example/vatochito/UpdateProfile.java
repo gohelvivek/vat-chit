@@ -100,9 +100,6 @@ public class UpdateProfile extends AppCompatActivity {
 
         mnewusername.setText(intent.getStringExtra("nameofuser"));
 
-
-
-
         DatabaseReference databaseReference=firebaseDatabase.getReference(firebaseAuth.getUid());
 
         mupdateprofilebutton.setOnClickListener(new View.OnClickListener() {
@@ -138,19 +135,11 @@ public class UpdateProfile extends AppCompatActivity {
                     updatenameoncloudfirestore();
                     Toast.makeText(getApplicationContext(),"Updated",Toast.LENGTH_SHORT).show();
                     mprogressbarofupdateprofile.setVisibility(View.INVISIBLE);
-                    Intent intent=new Intent(UpdateProfile.this,chatActivity.class);
+                    Intent intent=new Intent(UpdateProfile.this,ProfileActivity.class);
                     startActivity(intent);
                     finish();
 
-
-
-
                 }
-
-
-
-
-
             }
         });
 
@@ -171,16 +160,7 @@ public class UpdateProfile extends AppCompatActivity {
                 Picasso.get().load(uri).into(mgetnewimageinimageview);
             }
         });
-
-
-
-
-
     }
-
-
-
-
 
     private void updatenameoncloudfirestore() {
 

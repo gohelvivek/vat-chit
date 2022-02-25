@@ -216,14 +216,7 @@ public class setProfile extends AppCompatActivity {
             imagepath=data.getData();
             mgetuserimageinimageview.setImageURI(imagepath);
         }
-
-
-
-
         super.onActivityResult(requestCode, resultCode, data);
     }
-
-
-
 
 }

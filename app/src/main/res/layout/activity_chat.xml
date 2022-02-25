@@ -23,9 +23,9 @@
                 android:id="@+id/myapptext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="serif"
                 android:text="!! VAT-CHIT !!"
                 android:textColor="#134f54"
-                android:fontFamily="serif"
                 android:textSize="20sp"
                 android:textStyle="bold">
 
