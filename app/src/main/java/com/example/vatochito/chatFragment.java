@@ -74,7 +74,7 @@ public class chatFragment extends Fragment {
                 noteViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent = new Intent(getActivity(),specificchat.class);
+                        Intent intent = new Intent(getActivity(),SpecificChat.class);
                         intent.putExtra("name",firebasemodel.getName());
                         intent.putExtra("receiveruid",firebasemodel.getUid());
                         intent.putExtra("imageuri",firebasemodel.getImage());

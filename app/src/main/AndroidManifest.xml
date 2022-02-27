@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VatoChito">
         <activity
-            android:name=".specificchat"
-            android:exported="false" />
-        <activity
             android:name=".UpdateProfile"
             android:exported="false" />
         <activity
