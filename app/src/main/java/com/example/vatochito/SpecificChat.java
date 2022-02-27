@@ -30,7 +30,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
-public class specificchat extends AppCompatActivity {
+public class SpecificChat extends AppCompatActivity {
 
 
     EditText mgetmessage;
@@ -80,7 +80,7 @@ public class specificchat extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
         linearLayoutManager.setStackFromEnd(true);
         mmessagerecyclerview.setLayoutManager(linearLayoutManager);
-        messagesAdapter=new MessagesAdapter(specificchat.this,messagesArrayList);
+        messagesAdapter=new MessagesAdapter(SpecificChat.this,messagesArrayList);
         mmessagerecyclerview.setAdapter(messagesAdapter);
 
         intent=getIntent();
@@ -111,7 +111,7 @@ public class specificchat extends AppCompatActivity {
         recieverroom=mrecieveruid+msenderuid;
 
         DatabaseReference databaseReference=firebaseDatabase.getReference().child("chats").child(senderroom).child("messages");
-        messagesAdapter=new MessagesAdapter(specificchat.this,messagesArrayList);
+        messagesAdapter=new MessagesAdapter(SpecificChat.this,messagesArrayList);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
