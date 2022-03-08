@@ -21,8 +21,6 @@ import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
     EditText mgetphonenumber;
     android.widget.Button msendotp;
     CountryCodePicker mcountrycodepicker;
@@ -31,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth firebaseAuth;
     ProgressBar mprogressbarofmain;
-
-
 
     PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
     String codesent;
